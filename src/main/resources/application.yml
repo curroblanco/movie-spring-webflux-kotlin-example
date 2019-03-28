@@ -1,0 +1,6 @@
+# MongoDB Configuration
+spring:
+  data:
+    mongodb:
+      database: mongo-movie-demo
+      uri: mongodb://root:root@localhost:27017/?authSource=admin&authMechanism=SCRAM-SHA-1
