@@ -2,12 +2,16 @@
 
 Sample repository using Spring-Boot with WebFlux using reactive repository
 
-## Setting up MongoDB
+## Requirements
 
-For setting up the database, the usage of Docker is recomended.
+Having both **Docker** and **Docker-Compose** tools installed on your OS.
+
+## Instructions
+
+Running the following command on your project's main directory:
 
 ````
-docker run --name mongo -d mongo:tag
+docker-compose up
 ````
 
 ## Kotlin REST-Api example
@@ -31,6 +35,28 @@ This API exposes the following Endpoints for the Movie resource:
 }
 ````
 
+* Example Movie CURL Post
 
+```
+curl -X POST \
+  http://localhost:8080/movies \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 163' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:8080' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"title": "Example title",
+	"genre": "Example Genre",
+	"year": 1990,
+	"actors": [
+		"Actor 1",
+		"Actor 2"
+		]
+}'
+```
 
     

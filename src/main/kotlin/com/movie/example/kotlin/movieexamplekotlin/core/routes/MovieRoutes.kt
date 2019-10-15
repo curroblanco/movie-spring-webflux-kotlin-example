@@ -12,7 +12,7 @@ class MovieRoutes(private val movieHandler: MovieHandler) {
     @Bean
     fun router(movieHandler: MovieHandler) = router {
         accept(MediaType.APPLICATION_JSON).nest {
-            "/movie".nest {
+            "/movies".nest {
                 GET("/", movieHandler::getAllMovies)
                 POST("/", movieHandler::addMovie)
                 GET("/{id}", movieHandler::getMovie)
